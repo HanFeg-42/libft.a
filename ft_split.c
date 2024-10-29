@@ -9,7 +9,7 @@
 /*   Updated: 2024/10/27 21:22:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//-----------DONE----------------
 #include "libft.h"
 
 int ft_countwords(char const *s, char c)
@@ -85,14 +85,14 @@ char **ft_split(char const *s, char c)
 
 // SSSSSSSSSPPPPPPPPPPLLLLLLLLLLLIIIIIIIIIIITTTTTTTTTTTT
 
-int main()
-{
-    char *s = " hello world  9 hrrrr ";
-    char **sp = ft_split(s, ' ');
-    int i = 0;
-    while (sp[i])
-    {
-        printf("%s\n", sp[i++]);
-    }
-    return 0;
-}
+// int main()
+// {
+//     char *s = " hello world  9 hrrrr ";
+//     char **sp = ft_split(s, ' ');
+//     int i = 0;
+//     while (sp[i])
+//     {
+//         printf("%s\n", sp[i++]);
+//     }
+//     return 0;
+// }

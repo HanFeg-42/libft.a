@@ -9,7 +9,7 @@
 /*   Updated: 2024/10/27 00:38:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//-----------DONE---------------
 #include "libft.h"
 
 char *ft_strdup(const char *str)
@@ -36,5 +36,5 @@ char *ft_strdup(const char *str)
 //     const char *str1 = "hello world!";
 
 //     printf("ft_strdup =>\t%s\n", ft_strdup(str));
-//     printf("strdup =>\t%s\n", ft_strdup(str1));
+//     printf("strdup =>\t%s\n", strdup(str1));
 // }

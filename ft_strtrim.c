@@ -96,6 +96,21 @@ int main()
     return 0;
 }*/
 
+//other way:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // char *ft_strtrim(char const *s1, char const *set)
 // {
 //     char *ret;
