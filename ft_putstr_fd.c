@@ -6,17 +6,17 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:48:55 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/10/25 14:55:08 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/10/31 05:02:02 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        ft_putchar_fd(s[i++], fd);
+	i = 0;
+	while (s[i])
+		ft_putchar_fd(s[i++], fd);
 }
