@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:13:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 04:35:12 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:06:33 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_elmt = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
-	new_elmt = ft_lstnew(f(lst->content));
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->next->content));
-		ft_lstadd_back(&new_elmt, tmp);
-		if (!new_elmt)
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
 		{
 			ft_lstclear(&new_elmt, del);
 			return (NULL);
 		}
+		ft_lstadd_back(&new_elmt, tmp);
 		lst = lst->next;
 	}
 	return (new_elmt);
