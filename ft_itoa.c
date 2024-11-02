@@ -6,11 +6,27 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 06:15:40 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 05:22:55 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/02 13:45:29 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+unsigned int	nbr_size(long n, long d)
+{
+	unsigned int	size;
+
+	size = 0;
+	if (n < 0)
+		size++;
+	while (d * 10 <= n)
+	{
+		d *= 10;
+		size++;
+	}
+	size++;
+	return (size);	
+}
 
 char	*full_s(char *s, long d, long n, int i)
 {
@@ -34,7 +50,8 @@ char	*ft_itoa(int nbr)
 	i = 0;
 	n = nbr;
 	d = 1;
-	s = malloc(sizeof(char) * 11);
+	//s = malloc(sizeof(char) * 12);
+	s = malloc(sizeof(char) * (nbr_size(n, d) + 1));
 	if (!s)
 		return (NULL);
 	if (n < 0)
