@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:29:49 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 03:00:07 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:20:00 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		j;
 
+	if (!s1 || !set)
+		return (NULL);
 	size = ret_size(s1, set);
 	ret = malloc(sizeof(char const) * size + 1);
 	if (!ret)
@@ -77,24 +79,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ret);
 }
 
-/*
-int	main(void)
-{
-	char *s1 = ", ? Hello cv? good.,,? ";
-	char *s2 = ", ? Hello cv? good.";
-	char *s3 = "Hello cv? good.,,? ";
-	char *set = ", ?";
-	char *s;
-	s = ft_strtrim(s1, set);
-	char *ss;
-	ss = ft_strtrim(s2, set);
-	char *sss;
-	sss = ft_strtrim(s3, set);
-	printf("s1\t===> %s\n", s);
-	printf("s2\t===> %s\n", ss);
-	printf("s3\t===> %s\n", sss);
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	char *s1 = ", ? Hello cv? good.,,? ";
+// 	char *s2 = ", ? Hello cv? good.";
+// 	char *s3 = "";
+// 	char *set = "";
+// 	char *s;
+// 	s = ft_strtrim(s1, set);
+// 	char *ss;
+// 	ss = ft_strtrim(s2, set);
+// 	char *sss;
+// 	sss = ft_strtrim(s3, set);
+// 	printf("s1\t===> %s\n", s);
+// 	printf("s2\t===> %s\n", ss);
+// 	printf("s3\t===> %s\n", sss);
+// 	return (0);
+// }
 
 // other way:
 
