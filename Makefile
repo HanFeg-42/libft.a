@@ -18,11 +18,15 @@
 # 	command
 # 	command
 
+NAME	=	libft.a
+
 CC		=	cc
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-NAME	=	libft.a
+RM		=	rm -f
+
+ar		=	ar -rcs
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -61,7 +65,9 @@ SRCS	=	ft_isalpha.c \
 
 OBJS	=	${SRCS:.c=.o}
 
-B_SRCS	=	ft_lstnew_bonus.c \.c \
+B_SRCS	=	ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c \
 			ft_lstdelone_bonus.c \
@@ -71,15 +77,24 @@ B_SRCS	=	ft_lstnew_bonus.c \.c \
 
 B_OBJS	=	${B_SRCS:.c=.o}
 
-all:
-	$(CC) $(FLAGS) -o $(SRCS) $(OBJS)
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
+bonus: $(NAME) $(B_OBJS)
+	$(AR) $(NAME) $(B_OBJS)
+
+all: $(NAME)
+# $(CC) $(FLAGS) -o $(OBJS) $(SRCS)
 
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS) $(B_OBJS)
 
 fclean: clean
+	$(RM) $(NAME)
 
-re:
+re: fclean $(NAME)
+
+.PHONY: all bonus clean fclean re
 
 
 
