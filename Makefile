@@ -6,7 +6,7 @@
 #    By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 17:35:22 by hfegrach          #+#    #+#              #
-#    Updated: 2024/11/01 09:51:58 by hfegrach         ###   ########.fr        #
+#    Updated: 2024/11/03 18:16:03 by hfegrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,6 @@ bonus: $(NAME) $(B_OBJS)
 	$(AR) $(NAME) $(B_OBJS)
 
 all: $(NAME)
-# $(CC) $(FLAGS) -o $(OBJS) $(SRCS)
 
 clean:
 	$(RM) $(OBJS) $(B_OBJS)

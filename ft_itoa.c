@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 06:15:40 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/02 19:48:14 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/02 21:55:02 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ unsigned int	nbr_size(long n, long d)
 	{
 		size++;
 		n = -n;
-	}	
+	}
 	while (d <= n)
 	{
 		d *= 10;
 		size++;
 	}
-	return (size);	
+	return (size);
 }
 
 char	*full_s(char *s, long d, long n, int i)
