@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 17:11:42 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/01 11:42:28 by hfegrach         ###   ########.fr       */
+/*   Created: 2024/11/03 18:23:33 by hfegrach          #+#    #+#             */
+/*   Updated: 2024/11/03 18:34:11 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dstsize;
 	size_t	srcsize;
 
+	// if (!size)
+		
 	dstsize = ft_strlen(dst);
 	srcsize = ft_strlen(src);	
 	if (size <= dstsize)
@@ -43,3 +45,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 //     //printf("strlcat\t\t====>%s| return %zu\n", dst, a);
 //     printf("ft_strlcat\t====>%s| return %zu\n", dst1, b);
 // }
+
+//and the destination string will not be NUL-terminated
