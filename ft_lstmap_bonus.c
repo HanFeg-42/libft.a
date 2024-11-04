@@ -63,7 +63,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	ft_lstadd_back(&new, ft_lstnew(s4));
 // 	ft_lstadd_back(&new, ft_lstnew(s5));
 // 	last = ft_lstlast(new);
-
+// 	printf("last = %s\n", (char*)(last->content));
 // 	printf("size = %d\n", ft_lstsize(new));
 // 	current = new;
 // 	while (current)
@@ -71,7 +71,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		printf("%s\t", (char*)(current->content));
 // 		current = current->next;
 // 	}
-// 	// ft_lstdelone(last, del);
+// 	ft_lstdelone(last, del);
 // 	// printf("after delone\n");
 // 	// current = new;
 // 	// while (current)
@@ -79,7 +79,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	// 	printf("%s\t", (char*)(current->content));
 // 	// 	current = current->next;
 // 	// }
-// 	free(new);
+// 	// free(new);
 // }
 
 
