@@ -34,6 +34,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_elmt);
 }
 
+int main()
+{
+	t_list *new;
+	char str[] = "hello";
+
+	new = ft_lstnew(str);
+	
+
+
+}
+
+
 // t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // {
 //     t_list *current;
