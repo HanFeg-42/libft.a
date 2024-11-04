@@ -34,16 +34,53 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_elmt);
 }
 
-int main()
-{
-	t_list *new;
-	char str[] = "hello";
+// void del(void *content) {
+//     free(content); // Free the integer pointer
+// }
 
-	new = ft_lstnew(str);
-	
+// void *increment(void *content) {
+//     if (!content) return NULL;
+//     int *new_value = malloc(sizeof(int));
+//     if (!new_value) return NULL; // Handle memory allocation failure
+//     *new_value = *(int *)content + 1; // Increment the integer
+//     return new_value; // Return new incremented value
+// }
 
+// int main()
+// {
+// 	t_list *new;
+// 	t_list *current;
+// 	t_list *last;
+// 	char s1[] = " ana first new ";
+// 	char s2[] = " ana add back ";
+// 	char s3[] = " ana add front";
+// 	char s5[] = " ana last node";
+// 	char s4[] = " to be delone";
 
-}
+// 	new = ft_lstnew(s1);
+// 	ft_lstadd_back(&new, ft_lstnew(s2));
+// 	ft_lstadd_front(&new, ft_lstnew(s3));
+// 	ft_lstadd_back(&new, ft_lstnew(s4));
+// 	ft_lstadd_back(&new, ft_lstnew(s5));
+// 	last = ft_lstlast(new);
+
+// 	printf("size = %d\n", ft_lstsize(new));
+// 	current = new;
+// 	while (current)
+// 	{
+// 		printf("%s\t", (char*)(current->content));
+// 		current = current->next;
+// 	}
+// 	// ft_lstdelone(last, del);
+// 	// printf("after delone\n");
+// 	// current = new;
+// 	// while (current)
+// 	// {
+// 	// 	printf("%s\t", (char*)(current->content));
+// 	// 	current = current->next;
+// 	// }
+// 	free(new);
+// }
 
 
 // t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
