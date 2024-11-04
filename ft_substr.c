@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:19:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/02 20:29:39 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/04 01:16:06 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*ret;
 	unsigned int	i;
-	
+
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!ret)
 		return (NULL);
 	i = 0;
-	while (s[i] && i < len) 
+	while (s[i] && i < len)
 	{
 		ret[i] = s[start + i];
 		i++;
@@ -48,5 +48,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	printf("s1\t===> %s\n", s);
 // 	return (0);
 // }
-
-

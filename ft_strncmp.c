@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:07:15 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/01 13:36:37 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/04 01:21:01 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (i == n - 1)
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
-
-	}	
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);;
+	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 // int main()
