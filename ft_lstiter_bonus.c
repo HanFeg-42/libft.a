@@ -23,37 +23,37 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 
-// void del(void *content) {
-//     free(content); // Free the pointer
-// }
+void del(void *content) {
+    free(content); // Free the pointer
+}
 
-// void f(void *content)
-// {
-//     char *str = (char *)content;
-//     char **new_str = (char **)ft_strdup(str);  // Create a copy of the string
+void f(void *content)
+{
+    char *str = (char *)content;
+    char **new_str = (char **)ft_strdup(str);  // Create a copy of the string
 
-//     for (int i = 0; new_str[0][i]; i++) {
-//         new_str[0][i] = ft_toupper((unsigned char)new_str[0][i]);  // Convert each character to uppercase
-//     }
-// }
+    for (int i = 0; new_str[i]; i++) {exit(0);
+        new_str[i] = (unsigned char)ft_toupper((unsigned char)new_str[i]);  // Convert each character to uppercase
+    }
+}
 
-// int main()
-// {
-// 	t_list *tmp;
-// 	char *s1 = ft_strdup("salam");
-// 	char *s2 = ft_strdup("zahia");
+int main()
+{
+	t_list *tmp;
+	char *s1 = ft_strdup("salam");
+	char *s2 = ft_strdup("zahia");
 
-// 	t_list *lst = ft_lstnew(s1);
-// 	ft_lstadd_back(&lst, ft_lstnew(s2));
-// 	ft_lstiter(lst, f);
-// 	tmp = lst;
-// 	while(tmp)
-// 	{
-// 		printf("%s\n", (char*)(tmp->content));
-// 		tmp = tmp->next;
-// 	}
-// 	ft_lstclear(&lst, del);
-// }
+	t_list *lst = ft_lstnew(s1);
+	ft_lstadd_back(&lst, ft_lstnew(s2));
+	ft_lstiter(lst, f);
+	tmp = lst;
+	while(tmp)
+	{
+		printf("%s\n", (char*)(tmp->content));
+		tmp = tmp->next;
+	}
+	ft_lstclear(&lst, del);
+}
 
 // void f(void *s)
 // {
