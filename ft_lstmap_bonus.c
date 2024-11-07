@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:13:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/01 13:06:33 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:02:42 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 //         return NULL;  // Handle memory allocation failure
 
 //     for (int i = 0; new_str[i]; i++) {
-//         new_str[i] = ft_toupper((unsigned char)new_str[i]);  // Convert each character to uppercase
+//         new_str[i] = ft_toupper((unsigned char)new_str[i]); 
+//         // Convert each character to uppercase
 //     }
 //     return new_str;
 // }
-
 
 // int main()
 // {
@@ -95,7 +95,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	}
 // 	ft_lstclear(&new, del);
 // }
-
 
 // t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // {
