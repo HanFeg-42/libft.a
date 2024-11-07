@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	if (!s1)
-	return NULL;
+		return NULL;
 	if (!set)
 		return ((char *)s1);
 	while (s1[i] && ft_strchr(set, s1[i]))

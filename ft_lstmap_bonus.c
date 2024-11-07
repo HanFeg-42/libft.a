@@ -93,6 +93,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		printf("%s\t", (char*)(current->content));
 // 		current = current->next;
 // 	}
+// 	printf("\n");
 // 	ft_lstclear(&new, del);
 // }
 
