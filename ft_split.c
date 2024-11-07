@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:22:18 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 19:56:34 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/07 22:40:22 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	int		a;
-
+	if (!s)
+		return (NULL);
 	ret = malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
 	if (!ret)
 		return (NULL);
@@ -83,8 +84,7 @@ char	**ft_split(char const *s, char c)
 	ret[a] = NULL;
 	return (ret);
 }
-	// if (!s)
-	// 	return (NULL);
+
 // SSSSSSSSSPPPPPPPPPPLLLLLLLLLLLIIIIIIIIIIITTTTTTTTTTTT
 
 // int	main(void)

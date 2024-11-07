@@ -6,7 +6,7 @@
 #    By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 17:35:22 by hfegrach          #+#    #+#              #
-#    Updated: 2024/11/04 00:16:05 by hfegrach         ###   ########.fr        #
+#    Updated: 2024/11/07 23:39:46 by hfegrach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ B_OBJS	=	${B_SRCS:.c=.o}
 
 all: $(NAME)
 
-# %.o: %.c
+# %.o: %.c #pattern rule imlicit rule
 # 	$(CC) $(CFLAGS) -c $< -o $@ ghi zayda
 
 $(NAME): $(OBJS)
