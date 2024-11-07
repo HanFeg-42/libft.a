@@ -30,8 +30,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int main()
 // {
-//     const char *s1 = "abcdefghoo";
-//     const char *s2 = "abcdefgzxc";
-//     printf("strncmp ======> %d\n", strncmp(s1, s2, 7));
-//     printf("ft_strncmp ======> %d\n", ft_strncmp(s1, s2, 7));
+//     // const char *s1 = "";
+//     // const char *s2 = "";
+//     printf("strncmp ======> %d\n", strncmp("    ", "   ", 0));
+//     printf("ft_strncmp ======> %d\n", ft_strncmp("  ", "  ", 0));
 // }

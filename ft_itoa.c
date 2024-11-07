@@ -32,7 +32,7 @@ unsigned int	nbr_size(long n, long d)
 	return (size);
 }
 
-char	*full_s(char *s, long d, long n, int i)
+static char	*full_s(char *s, long d, long n, int i)
 {
 	while (n >= 0 && d > 0)
 	{
@@ -73,7 +73,7 @@ char	*ft_itoa(int nbr)
 // {
 // 	printf("%s\n", ft_itoa(-2147483648LL));
 // 	printf("%s\n", ft_itoa(2147483647));
-// 	printf("%s\n", ft_itoa(-1));
+// 	printf("%s\n", ft_itoa(0));
 // 	printf("%s\n", ft_itoa(0));
 // 	printf("%s\n", ft_itoa(1));
 // 	return (0);

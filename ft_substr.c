@@ -42,9 +42,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main()
 // {
-// 	char *s1 = "Hello I wanna sleep !";
+// 	//char *s1 = "Hello I wanna sleep !";
 // 	char *s;
-// 	s = ft_substr(s1, 40, 10);
+// 	s = ft_substr("", 10, 0);
 // 	printf("s1\t===> %s\n", s);
 // 	return (0);
 // }

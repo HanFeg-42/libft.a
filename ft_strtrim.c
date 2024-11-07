@@ -21,6 +21,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t			len;
 
 	i = 0;
+	if (!s1)
+	return NULL;
+	if (!set)
+		return ((char *)s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	start = i;
@@ -98,12 +102,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 //----------MAIN----------
 // int	main(void)
 // {
-// 	char *s1 = ", ? Hello cv? good.,,? ";
+// 	//char *s1 = ", ? Hello cv? good.,,? ";
 // 	char *s2 = ", ? Hello cv? good.";
 // 	char *s3 = "";
 // 	char *set = "";
 // 	char *s;
-// 	s = ft_strtrim(s1, set);
+// 	s = ft_strtrim("dfhfghffgfgfg", "dg");
 // 	char *ss;
 // 	ss = ft_strtrim(s2, set);
 // 	char *sss;

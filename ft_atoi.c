@@ -37,10 +37,10 @@ int	ft_atoi(const char *a)
 	return (sign * res);
 }
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main()
-// {
-//     printf("ft_atoi is %d\n",ft_atoi("9223372036854775807"));
-//     printf("atoi is %d\n",atoi("9223372036854775807"));
-// }
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    printf("ft_atoi is %d\n",ft_atoi("9223372036"));
+    printf("atoi is %d\n",atoi("9223372036"));
+}
