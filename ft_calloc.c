@@ -16,8 +16,10 @@ void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*a;
 	size_t	final_size;
-ddfffff
+
 	final_size = nitems * size;
+	if (final_size > SIZE_MAX)
+		return (NULL);
 	a = malloc(final_size);
 	if (!a)
 		return (NULL);

@@ -29,22 +29,6 @@ void	*ft_memset(void *str, int c, size_t n)
 // #include <string.h>
 
 // int main() {
-
-
-// 	int tab[4] ;
-// char *k;
-// int i = 0;
-// 	while (tab[i])
-// 	{
-// 		k = char *(tab[i])
-// 		ft_memset(&tab[i], 1, 4 * sizeof(int));
-// 	}
-
-
-
-
-
-
     // char s1[35] = "ana b3da mgabla lbher la yrhel";
     // char s2[35] = "ana b3da mgabla lbher la yrhel";
     // char c = 'a';
@@ -54,4 +38,22 @@ void	*ft_memset(void *str, int c, size_t n)
     // printf("ft_memset :\t %s\n",s2);
     // ft_memset(s2, c, 50);
     // printf("ft_memset :\t %s\n",s2);
-//}
+// }
+
+// int main() {
+//     int *tab = malloc(sizeof(int) * 5) ;
+
+//     int i;
+//     ft_memset(tab, 0, 20);
+//     i = 0;
+//     while (i < 5)
+//     {
+//         ft_memset(&tab[i], 1, 1);
+//         i++;
+//     }
+//     i = 0;
+//     while (i < 5)
+//     {
+//         printf("%d", tab[i++]);
+//     }
+// }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	nbr_size(long n, long d)
+static unsigned int	nbr_size(long n, long d)
 {
 	unsigned int	size;
 
