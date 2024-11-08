@@ -23,7 +23,6 @@ CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f
 ar		=	ar -rcs
-INCS	=	.
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
@@ -75,7 +74,7 @@ B_OBJS	=	${B_SRCS:.c=.o}
 all: $(NAME) bonus
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I${INCS}
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
