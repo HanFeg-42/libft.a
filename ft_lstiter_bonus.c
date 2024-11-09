@@ -22,3 +22,25 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+// void del(void *content) {
+//     free(content); // Free the pointer
+// }
+
+// void ft_print(void *content)
+// {
+// 	char *s = (char*)content;
+
+// 	printf("%s\n", s);
+// }
+
+// int main()
+// {
+// 	char *s1 = ft_strdup("salam");
+// 	char *s2 = ft_strdup("zahia");
+// 	t_list *lst = ft_lstnew(s1);
+	
+// 	ft_lstadd_back(&lst, ft_lstnew(s2));
+// 	ft_lstiter(lst, ft_print);
+// 	ft_lstclear(&lst, del);
+// }

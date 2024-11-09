@@ -6,13 +6,13 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:22:18 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 19:56:34 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/08 00:39:15 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countwords(char const *s, char c)
+static int	ft_countwords(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -35,7 +35,7 @@ int	ft_countwords(char const *s, char c)
 	return (count);
 }
 
-char	*slices(char const *s, char c, int i)
+static char	*slices(char const *s, char c, int i)
 {
 	char	*str;
 	int		j;
@@ -62,7 +62,9 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	int		a;
-
+	
+	if (!s)
+		return (NULL);
 	ret = malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
 	if (!ret)
 		return (NULL);
@@ -83,8 +85,7 @@ char	**ft_split(char const *s, char c)
 	ret[a] = NULL;
 	return (ret);
 }
-	// if (!s)
-	// 	return (NULL);
+
 // SSSSSSSSSPPPPPPPPPPLLLLLLLLLLLIIIIIIIIIIITTTTTTTTTTTT
 
 // int	main(void)
@@ -93,8 +94,8 @@ char	**ft_split(char const *s, char c)
 // 	char	**sp;
 // 	int		i;
 
-// 	s = "      ";
-// 	sp = ft_split(s, ' ');
+// 	s = "\t\t\t\thello!\t\t\t\t";
+// 	sp = ft_split(s, '\t');
 // 	// exit(0);
 // 	i = 0;
 // 	while (i < ft_countwords(s, ' '))

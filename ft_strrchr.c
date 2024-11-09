@@ -6,45 +6,31 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:26:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/02 20:41:53 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/04 01:26:52 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char	*ft_strrchr(const char *str, int c)
-// {
-// 	size_t	i;
-
-// 	i = ft_strlen(str);
-// 	while (i > 0)
-// 	{
-// 		i--;
-// 		if (*((unsigned char *)str + i) == (unsigned char)c)
-// 			return ((char *)str + i);
-// 	}
-// 	return (NULL);
-// }
-
 char	*ft_strrchr(const char *str, int c)
 {
-	int i;
-	int tmp;
-	int a;
-	
+	int	i;
+	int	tmp;
+	int	a;
+
 	tmp = 0;
 	a = 0;
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 		{
 			tmp = i;
 			a++;
-		}		
+		}
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)str + i);
 	if (!tmp && !a)
 		return (NULL);
@@ -65,4 +51,18 @@ char	*ft_strrchr(const char *str, int c)
 
 //     printf("ft_strrchr =>\t%s\n", d2);
 //     printf("strrchr =>\t%s\n", d1);
+// }
+
+// char	*ft_strrchr(const char *str, int c)
+// {
+// 	size_t	i;
+
+// 	i = ft_strlen(str);
+// 	while (i > 0)
+// 	{
+// 		i--;
+// 		if (*((unsigned char *)str + i) == (unsigned char)c)
+// 			return ((char *)str + i);
+// 	}
+// 	return (NULL);
 // }

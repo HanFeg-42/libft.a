@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:37:57 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/03 23:19:54 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/04 09:35:37 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s && *s != (unsigned char)c)
 		s++;
-	if (*s == c)
+	if (*s == (unsigned char)c)
 		return ((char *)s);
 	return (NULL);
 }
@@ -43,4 +43,25 @@ char	*ft_strchr(const char *s, int c)
 //     printf("%s ====> %s\n", s1, strchr(s1, '\0'));
 
 //     return (0);
+// }
+
+// int	main(void)
+// {
+// 	char	*s = "Bonjour";
+
+// 	printf("%p\n", strchr(s, 'b'));
+// 	printf("my func-> %p\n\n", ft_strchr(s, 'b'));
+
+// 	printf("%p\n", strchr(s, 'j'));
+// 	printf("%p\n\n", ft_strchr(s, 'j'));
+
+// 	printf("%p\n", strchr(s, 's'));
+// 	printf("%p\n\n", ft_strchr(s, 's'));
+
+// 	printf("%p\n", strchr(s, '\0'));
+// 	printf("%p\n\n", ft_strchr(s, '\0'));
+
+// 	char	*s1 = "";
+// 	printf("%p\n", strchr(s1, '\0'));
+// 	printf("%p\n\n", ft_strchr(s1, '\0'));
 // }

@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:13:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/01 13:06:33 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:02:42 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,36 +35,47 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 }
 
 // void del(void *content) {
-//     free(content); // Free the integer pointer
+//     free(content); // Free the pointer
 // }
 
-// void *increment(void *content) {
-//     if (!content) return NULL;
-//     int *new_value = malloc(sizeof(int));
-//     if (!new_value) return NULL; // Handle memory allocation failure
-//     *new_value = *(int *)content + 1; // Increment the integer
-//     return new_value; // Return new incremented value
+// void *f(void *content)
+// {
+//     char *str = (char *)content;
+//     char *new_str = ft_strdup(str);  // Create a copy of the string
+//     if (!new_str)
+//         return NULL;  // Handle memory allocation failure
+
+//     for (int i = 0; new_str[i]; i++) {
+//         new_str[i] = ft_toupper((unsigned char)new_str[i]); 
+//         // Convert each character to uppercase
+//     }
+//     return new_str;
 // }
 
 // int main()
 // {
+// 	t_list *map;
 // 	t_list *new;
 // 	t_list *current;
+// 	t_list *tmp;
 // 	t_list *last;
-// 	char s1[] = " ana first new ";
-// 	char s2[] = " ana add back ";
-// 	char s3[] = " ana add front";
-// 	char s5[] = " ana last node";
-// 	char s4[] = " to be delone";
 
-// 	new = ft_lstnew(s1);
+// 	char *s1 = ft_strdup(" ana first new ");
+// 	char *s2 = ft_strdup(" ana add back ");
+// 	char *s3 = ft_strdup(" ana add front");
+// 	char *s4 = ft_strdup(" ana last node");
+// 	char *s5 = ft_strdup(" to be delone");
+
+// 	new = ft_lstnew(s1); // head
 // 	ft_lstadd_back(&new, ft_lstnew(s2));
 // 	ft_lstadd_front(&new, ft_lstnew(s3));
 // 	ft_lstadd_back(&new, ft_lstnew(s4));
+// 	tmp = ft_lstlast(new);
 // 	ft_lstadd_back(&new, ft_lstnew(s5));
 // 	last = ft_lstlast(new);
+
 // 	printf("last = %s\n", (char*)(last->content));
-// 	printf("size = %d\n", ft_lstsize(new));
+// 	printf("size = %d\n", ft_lstsize(new)); 
 // 	current = new;
 // 	while (current)
 // 	{
@@ -72,16 +83,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		current = current->next;
 // 	}
 // 	ft_lstdelone(last, del);
-// 	// printf("after delone\n");
-// 	// current = new;
-// 	// while (current)
-// 	// {
-// 	// 	printf("%s\t", (char*)(current->content));
-// 	// 	current = current->next;
-// 	// }
-// 	// free(new);
+// 	tmp->next = NULL;
+// 	printf("\n\nafter delone\n");
+// 	//ft_lstiter(new, f);
+// 	map = ft_lstmap(new, f, del);
+// 	current = map;
+// 	while (current)
+// 	{
+// 		printf("%s\t", (char*)(current->content));
+// 		current = current->next;
+// 	}
+// 	printf("\n");
+// 	ft_lstclear(&new, del);
 // }
-
 
 // t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // {

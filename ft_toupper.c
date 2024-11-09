@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:26:02 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 22:17:30 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/04 01:12:44 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	ft_toupper(int ch)
 {
-	// unsigned char	c;
-
-	// c = (unsigned char)ch;
 	if (ch >= 97 && ch <= 122)
 		return (ch - 32);
 	return (ch);

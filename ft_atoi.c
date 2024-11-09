@@ -41,6 +41,6 @@ int	ft_atoi(const char *a)
 // #include <stdlib.h>
 // int main()
 // {
-//     printf("ft_atoi is %d\n",ft_atoi("123"));
-//     printf("atoi is %d\n",atoi("123"));
+//     printf("ft_atoi is %d\n",ft_atoi("9223372036"));
+//     printf("atoi is %d\n",atoi("9223372036"));
 // }
