@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:22:18 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/08 00:39:15 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/09 12:10:53 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int ft_countword(char const *s, char c)
     return (count);
 }
 
-static char **ft_freeMe(char **s, int index)
+static char **ft_freeme(char **s, int index)
 {
     while (index >= 0)
     {
@@ -61,7 +61,7 @@ static char **ft_slices(char **ret, char const *s, char c,int a, int i, int j)
                 len++;
             ret[a] = ft_substr(s, i, len);
             if (!ret[a])
-                return (ft_freeMe(ret, a));
+                return (ft_freeme(ret, a));
             a++;
             j = 0;
         }

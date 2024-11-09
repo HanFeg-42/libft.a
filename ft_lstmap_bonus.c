@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:13:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/07 10:02:42 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/09 12:36:44 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_elmt;
 	t_list	*tmp;
+	void	*err;
 
 	new_elmt = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
-	{
-		tmp = ft_lstnew(f(lst->content));
+	{	err = f(lst->content);
+		tmp = ft_lstnew(err);
 		if (!tmp)
 		{
+			free(err);
 			ft_lstclear(&new_elmt, del);
 			return (NULL);
 		}

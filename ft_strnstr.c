@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:08:05 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 04:49:02 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/09 12:33:42 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 */
 // int main()
 // {
-//     char s[] = "anbla lbher laybher tirararar";
+//     //char s[] = "anbla lbher laybher tirararar";
 //     char search[] = "bher";
 
-//     char *str = ft_strnstr(s, search, 20);
-//     //char *str1 = strnstr(s, search, 10);
+//    // char *str = ft_strnstr(NULL, search, 7 );
+//     char *str1 = strnstr(NULL, search, 7);
 
-//     printf("%s\n",str);
-//     //printf("\%s",str1);
+//     //printf("%s\n",str);
+//     printf("%s\n",str1);
 // }
