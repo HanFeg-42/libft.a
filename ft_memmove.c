@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:55:39 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 19:54:59 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:20:48 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*((unsigned char *)dest + i) = *((unsigned char *)src + i);
 			i++;
 		}
-		return ((void *)dest);
+		return (dest);
 	}
 	else
 	{
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i--;
 			*((unsigned char *)dest + i) = *((unsigned char *)src + i);
 		}
-		return ((void *)dest);
+		return (dest);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:13:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/09 12:36:44 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/11 06:02:21 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,84 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_elmt);
 }
 
+// void del(void *content)
+// {
+// 	free(content);
+// }
+
+// void *incr(void *content)
+// {
+// 	return *content++;
+// }
+
+// int main()
+// {
+// 	int *a1 = malloc(sizeof(int));
+// 	int *a2 = malloc(sizeof(int));
+// 	int *a3 = malloc(sizeof(int));
+// 	int *a4 = malloc(sizeof(int));
+// 	int *a5 = malloc(sizeof(int));
+
+// 	*a1 = 1;
+// 	*a2 = 2;
+// 	*a3 = 3;
+// 	*a4 = 4;
+// 	*a5 = 5;
+	
+// 	t_list *s1 = ft_lstnew(a1);
+// 	t_list *s2 = ft_lstnew(a2);
+// 	t_list *head = ft_lstnew(a3);
+// 	t_list *s4 = ft_lstnew(a4);
+// 	t_list *s5 = ft_lstnew(a5);
+	
+// 	ft_lstadd_front(&head, s2);
+// 	ft_lstadd_front(&head, s1);
+// 	ft_lstadd_back(&head, s4);
+// 	ft_lstadd_back(&head, s5);
+
+// 	t_list *tmp;
+// 	tmp = head;
+
+// 	while (tmp)
+// 	{
+// 		printf("%d \t", *(int *)(tmp->content));
+// 		tmp = tmp->next;
+// 	}
+
+// 	head = ft_lstmap(head, incr, del);
+	
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // void del(void *content) {
 //     free(content); // Free the pointer
 // }
@@ -45,7 +123,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 //     char *str = (char *)content;
 //     char *new_str = ft_strdup(str);  // Create a copy of the string
 //     if (!new_str)
-//         return NULL;  // Handle memory allocation failure
+//         return NULL;
 
 //     for (int i = 0; new_str[i]; i++) {
 //         new_str[i] = ft_toupper((unsigned char)new_str[i]); 

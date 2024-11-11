@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:51:04 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/31 02:57:50 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:21:07 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memset(void *str, int c, size_t n)
 		*((unsigned char *)str + i) = (unsigned char)c;
 		i++;
 	}
-	return ((void *)str);
+	return (str);
 }
 
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:05:59 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/07 08:49:28 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/09 13:55:36 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	final_size;
 
 	final_size = nitems * size;
-	if (final_size > SIZE_MAX)
-		return (NULL);
+	if (size != 0 && (nitems > SIZE_MAX / size))
+        return (NULL);
 	a = malloc(final_size);
 	if (!a)
 		return (NULL);
