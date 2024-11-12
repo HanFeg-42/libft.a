@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hfegrach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:30:51 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/10/31 01:17:35 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:14:17 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *a)
 {
-	int	i;
-	int	sign;
-	int	res;
+	int		i;
+	int		sign;
+	long	res;
 
 	i = 0;
 	sign = 1;
@@ -34,7 +34,7 @@ int	ft_atoi(const char *a)
 		res = res * 10 + a[i] - '0';
 		i++;
 	}
-	return (sign * res);
+	return ((int)sign * res);
 }
 
 // #include <stdio.h>
